@@ -1,0 +1,35 @@
+<ion-header-bar class="bar bar-header bar-energized">
+    <button class="button button-clear icon ion-navicon" ng-click="toggleLeft()"></button>
+    <h1 class="title">FoodCart</h1>
+    <button class="button button-clear icon ion-bag" ui-sref='cart'><span class="span-size">{{getTotalQuantity()}}</span></button>
+</ion-header-bar>
+
+<ion-content class="has-subheader">
+<div class="list card">
+
+
+    <div class="item item-avatar">
+        <h2>{{menu.Title}}</h2>
+        <p>{{menu.Price}}</p>
+    </div>
+
+    <div class="item item-body">
+        <img class="full-image" ng-src={{menu.Image}}>
+    </div>
+
+<div class="item item-inset">
+
+    Quantity:{{range}}
+
+        <select  ng-model="range" ng-options="data for data in Range">
+    </select>
+</div>
+
+<button class="button button-block button-balanced" ng-click="buy(menu,range)"> Buy Item </button>
+
+    <button class="button button-block button-balanced" ng-click="addtocart(menu,range)"> Add to cart </button>
+
+    <button class="button button-block button-balanced"> Share </button>
+
+</div>
+</ion-content>

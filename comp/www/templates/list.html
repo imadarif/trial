@@ -1,0 +1,18 @@
+<ion-header-bar class="bar bar-header bar-energized">
+    <button class="button button-clear icon ion-navicon" ng-click="toggleLeft()"></button>
+    <h1 class="title">FoodCart</h1>
+    <button class="button button-clear icon ion-bag" ui-sref='cart'><span class="span-size">{{getTotalQuantity()}}</span></button>
+</ion-header-bar>
+
+<ion-content>
+
+    <div class="list" ng-repeat="Place in deals">
+
+        <a class="item item-thumbnail-right" href="#" ng-click="buyItem(Place,$index)" ui-sref="buy">
+            <img ng-src={{Place.Image}}>
+            <h2>{{Place.Title}}</h2>
+            <p>{{Place.Price}}</p>
+        </a>
+    </div>
+
+</ion-content>

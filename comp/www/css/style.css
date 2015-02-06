@@ -1,0 +1,15 @@
+/* Empty. Add your own CSS if you like */
+
+.buttonCenter{
+    margin: 0 auto !important;
+    padding: 0 20px 0 20px !important;
+}
+
+.span-size {
+        font-size: 11px !important;
+        position: absolute;
+        right: 15px;
+    top:4px;
+    font-weight: bold;
+
+}
